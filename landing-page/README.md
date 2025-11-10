@@ -3,8 +3,8 @@
 A full-stack web application for a coding institute, built using React (Vite) for the frontend and Express.js + MongoDB for the backend.
 This platform allows students to explore courses, read blogs, and learn more about the institute, while administrators can manage courses, blogs, and dashboard data.
 
-🚀 Features
-🧑‍🎓 User Side
+Features
+User Side
 
 Responsive landing page
 
@@ -16,7 +16,7 @@ Learn about the institute (About Us page)
 
 Smooth page transitions using Framer Motion
 
-🧑‍💼 Admin Side
+Admin Side
 
 Dashboard overview
 
@@ -26,7 +26,7 @@ Manage blogs
 
 Secure admin layout with routes
 
-🧩 Tech Stack
+Tech Stack
 Frontend
 
 React (Vite)
@@ -49,24 +49,55 @@ CORS
 
 📁 Folder Structure
 landingPage/
-│
-├── landing-page/
+├── backend/
+│   ├── controllers/
+│   │   ├── blogController.js
+│   │   └── courseController.js
+│   ├── models/
+│   │   ├── Blog.js
+│   │   └── Course.js
+│   ├── routes/
+│   │   ├── blogRoutes.js
+│   │   └── courseRoutes.js
+│   ├── .env
 │   ├── package.json
-│   ├── vite.config.js
-│   ├── index.html
-│   ├── src/
-│   │   ├── Components/          # User pages (Home, About, Blog, Courses)
-│   │   ├── Backend-front/       # Admin dashboard components
-│   │   ├── Context/             # Global contexts for blog & course data
-│   │   └── App.jsx              # Combined routing for user + admin
-│   └── public/
+│   ├── server.js
+│   
 │
-└── backend/
-    ├── server.js
-    ├── models/
-    ├── routes/
-    ├── controllers/
-    └── .env
+└── landing-page/
+    ├── public/
+    ├── index.html
+    ├── package.json
+    ├── vite.config.js
+    ├── src/
+    │   ├── App.jsx
+    │   ├── App.css
+    │   ├── main.jsx
+    │   │
+    │   ├── Components/
+    │   │   ├── Home.jsx
+    │   │   ├── About.jsx
+    │   │   ├── Blog.jsx
+    │   │   ├── MainCourses.jsx
+    │   │   ├── UserLayout.jsx
+    │   │   └── Navbar.jsx
+    │   │
+    │   ├── Backend-front/
+    │   │   ├── Layout.jsx
+    │   │   ├── Dashboard.jsx
+    │   │   ├── Courses.jsx
+    │   │   ├── ManageBlogs.jsx
+    │   │   └── AddCourse.jsx
+    │   │
+    │   ├── Context/
+    │   │   ├── BlogContext.jsx
+    │   │   └── CourseContext.jsx
+    │   │
+    │   └── assets/
+    │       ├── logo.png
+    │       └── hero.jpg
+    │
+    └── README.md
 
 ⚙️ Setup Instructions
 1. Clone the Repository
@@ -105,7 +136,7 @@ Frontend: http://localhost:5173
 
 Backend: http://localhost:5000
 
-🧠 Routing Summary
+Routing Summary
 User Routes
 Path	Description
 /	Landing Page
@@ -120,7 +151,7 @@ Path	Description
 /admin/blogs	Manage Blogs
 /admin/add-courses	Add New Course
 
-🧑‍💻 Author
+Author
 
 Manish Pasman
-💼 Aspiring Full Stack Developer
+Aspiring Full Stack Developer
