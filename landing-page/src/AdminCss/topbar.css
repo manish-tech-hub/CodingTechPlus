@@ -1,0 +1,65 @@
+/* Topbar Container */
+.topbar {
+  height: 60px;
+  width: 100%;
+  background-color: #1f1f2e;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0 !important;
+  z-index: 90;
+}
+
+/* Icon (menu toggle) */
+.topbar .menu-icon {
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #fff;
+  padding-left: 15px;
+}
+
+/* Greeting text */
+.topbar p {
+  margin: 0;
+  padding-right: 15px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #fff;
+}
+
+/* Responsive for tablets and mobiles */
+@media (max-width: 1024px) {
+  .topbar .menu-icon {
+    display: block; /* show menu icon */
+  }
+
+  .topbar p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .topbar {
+    padding: 0 15px;
+  }
+
+  .topbar p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .topbar {
+    height: 50px;
+    padding: 0 10px;
+  }
+
+  .topbar .menu-icon {
+    font-size: 1.3rem;
+  }
+
+  .topbar p {
+    font-size: 0.85rem;
+  }
+}

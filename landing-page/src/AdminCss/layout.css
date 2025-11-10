@@ -1,0 +1,58 @@
+/* Default layout */
+.admin-layout {
+  display: flex;
+  min-height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Sidebar */
+.admin-layout .sidebar {
+  width: 250px;
+  background-color: #1f1f2e;
+  color: #fff;
+  height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: fixed;
+  left: 0;
+  top: 50px; /* below topbar */
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+/* Sidebar closed (desktop) */
+.admin-layout.sidebar-closed .sidebar {
+  left: -250px;
+}
+
+/* Main content */
+.admin-layout .admin-main {
+  flex: 1;
+  left: 0;
+  padding: 0px;
+  background-color: #f4f4f4;
+}
+
+/* Mobile behavior */
+@media (max-width: 768px) {
+  .admin-layout .sidebar {
+    width: 220px;
+    left: -220px ; /* always hidden by default */
+    top: 50px;
+    height: 100%;
+  }
+
+  /* Open sidebar */
+  .admin-layout.sidebar-open .sidebar {
+    left: 0 !important;
+  }
+
+  /* Main always full width */
+  .admin-layout .admin-main {
+    margin-left: 0;
+    transition: none;
+  }
+}

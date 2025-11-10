@@ -1,0 +1,134 @@
+.course-container {
+  padding: 20px;
+  background-color: #f4f4f4;
+  min-height: 80vh;
+  transition: margin-left 0.3s ease;
+}
+
+/* Margin adjusts with sidebar */
+.course-container.sidebar-open {
+  margin-left: 250px; /* adjust according to sidebar width */
+}
+
+.course-container.sidebar-closed {
+  margin-left: 0;
+}
+
+/* Header with Add button */
+.course-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.course-header h2 {
+  font-size: 1.8rem;
+  color: #333;
+}
+
+.add-btn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 8px 12px;
+  background-color: #1f1f2e;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.add-btn:hover {
+  background-color: #333;
+}
+
+/* Table */
+.courses-table {
+  overflow-x: auto;
+}
+
+.courses-table table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.courses-table th,
+.courses-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  vertical-align: middle;
+}
+
+.courses-table th {
+  background-color: #1f1f2e;
+  color: #fff;
+  font-weight: 600;
+}
+
+.courses-table tr:hover {
+  background-color: #f0f0f0;
+}
+
+/* Course images */
+.course-image img {
+  width: 60px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+/* Action Icons */
+.action-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.edit-icon {
+  color: #4caf50;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.edit-icon:hover {
+  color: #45a049;
+}
+
+.delete-icon {
+  color: #f44336;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.delete-icon:hover {
+  color: #d32f2f;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .courses-table th, .courses-table td {
+    padding: 10px 8px;
+    font-size: 0.9rem;
+  }
+  .course-container.sidebar-open{
+    margin-left: 0 !important;
+  }
+
+  .add-btn {
+    padding: 6px 10px;
+    font-size: 0.85rem;
+  }
+
+  .edit-icon, .delete-icon {
+    font-size: 0.9rem;
+  }
+
+  .course-image img {
+    width: 50px;
+    height: 35px;
+  }
+}

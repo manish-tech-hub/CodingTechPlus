@@ -1,0 +1,243 @@
+/* === DESKTOP STYLES === */
+.hero-container {
+  display: flex;
+  justify-content: flex-start; /* updated */
+  align-items: flex-end;
+  padding: 20px;
+  background: #eee;
+  height: 500px;
+  flex-wrap: wrap;
+  position: relative;
+  overflow: hidden;
+}
+.slogan-carousel {
+  max-width: 600px;
+  width: 100%;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  z-index: 2;
+}
+
+.slogan-slide {
+  padding: 20px 30px;
+  text-align: left;
+  color: #007acc;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.slogan-heading {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #FF4F81;
+}
+
+.slogan-text {
+  font-size: 18px;
+  font-weight: 400;
+  color: #444;
+  line-height: 1.5;
+}
+
+/* 👇 Search box pinned bottom-left under carousel */
+.search-box {
+  position: absolute;
+  bottom: 140px;
+  display: flex;
+  padding: 0;
+  z-index: 3;
+  overflow: hidden;
+  border-radius: 13px;
+  box-shadow: 0 4px 10px rgba(255, 79, 129, 0.3);
+  background: white;
+  left: 60px !important;
+}
+
+/* Search input styling */
+.search-input {
+  padding: 10px 15px;
+  font-size: 16px;
+  outline: none;
+  border: none;
+  flex-shrink: 0;
+  color: #333;
+  border-radius: 13px 0 0 13px;
+  box-sizing: border-box;
+  background: transparent;
+  min-width: 0;
+  
+}
+
+/* Search button */
+.search-button {
+  background-color: #FF4F81;
+  color: white;
+  border: none;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+  border-radius: 0 13px 13px 0;
+  padding: 0;
+  flex-shrink: 0;
+}
+
+.search-button:hover {
+  background-color: #e13a6f;
+}
+
+/* Avatar */
+.image-wrapper {
+  max-width: 500px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 500px;
+  position: relative;
+  margin-left: 700px;
+}
+
+.hero-image {
+  max-height: 500px;
+  width: auto;
+  height: 100%;
+  z-index: 2;
+  position: relative;
+  filter: drop-shadow(0 18px 40px rgba(0, 0, 0, 0.25));
+  border-radius: 10px;
+}
+
+/* === RESPONSIVE STYLES === */
+
+@media (max-width: 1024px) {
+  .hero-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px !important;
+    margin: 0 !important;
+    height: auto;
+  }
+
+  .slogan-carousel {
+    order: 1;
+    position: static;
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 15px;
+    padding: 0 10px;
+  }
+
+  .image-wrapper {
+    order: 2;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .hero-image {
+    height: auto;
+    max-height: 500px !important;
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+    filter: drop-shadow(0 18px 40px rgba(0, 0, 0, 0.25));
+  }
+
+  .search-box {
+    order: 3;
+    position: relative;
+    width: 80% !important;
+    margin: 130px auto;
+    display: flex;
+    box-shadow: 0 4px 10px rgba(255, 79, 129, 0.3);
+    border-radius: 13px;
+    background: white;
+    overflow: hidden;
+    margin-bottom: -40px !important;
+    
+  }
+
+  .search-input {
+    flex: 1;
+    width: 100%;
+    border-radius: 13px 0 0 13px;
+    padding: 11px 15px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #333;
+  }
+
+  .search-button {
+    width: 40px;
+    height: 40px;
+    border-radius: 0 13px 13px 0;
+    background-color: #FF4F81;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+  }
+
+  .search-button:hover {
+    background-color: #e13a6f;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-image {
+    max-height: 380px;
+  }
+
+  .search-box {
+    width: 100%;
+    max-width: 100%;
+    margin: 130px auto;
+    position: relative;
+    margin-left: 0px !important;
+  }
+
+  .search-input {
+    font-size: 14px;
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .slogan-heading {
+    font-size: 18px;
+  }
+
+  .slogan-text {
+    font-size: 16px;
+  }
+
+  .hero-image {
+    max-height: 320px;
+  }
+
+  .search-box {
+    width: 100%;
+    max-width: 100%;
+    margin: 130px auto;
+    margin-bottom: -70px !important;
+    margin-left: -20px !important;
+    position: relative;
+  }
+
+  .search-input {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+}
