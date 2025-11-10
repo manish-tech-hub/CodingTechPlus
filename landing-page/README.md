@@ -101,7 +101,7 @@ landingPage/
 
 ⚙️ Setup Instructions
 1. Clone the Repository
-git clone https://github.com/<your-username>/<repo-name>.git
+git clone https://github.com/manish-tech-hub/CodingTechPlus.git
 cd landingPage
 
 2. Install Dependencies
