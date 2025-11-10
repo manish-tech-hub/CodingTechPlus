@@ -7,7 +7,7 @@ import axios from "axios";
     useEffect(()=>{
         const fetchCourses = async () => {
       try {
-        const { data } = await axios.get("http://localhost:5000/api/courses");
+        const { data } = await axios.get("https://codingtechplus.onrender.com/api/courses");
         setCourses(data);
       } catch (err) {
         console.error("Error fetching courses:", err);

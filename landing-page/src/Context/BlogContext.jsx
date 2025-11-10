@@ -7,7 +7,7 @@ export const BlogProvider=({children})=>{
     useEffect(()=>{
        const ftechBlogs=async()=>{
         try{
-            const res = await axios.get('http://localhost:5000/api/blogs')
+            const res = await axios.get('https://codingtechplus.onrender.com/api/blogs')
             setBlogs(res.data)
         }catch(error){
             console.error("Error fetching blogs", error)
